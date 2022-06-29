@@ -1,4 +1,4 @@
-// Variables
+// ----------------- Variables ---------------------------
 
 $fuente1: 'Inter', sans-serif;
 $fuente2: 'Open Sans', sans-serif;
@@ -13,7 +13,7 @@ $breakmid: 780px;
 $breakmobile: 520px;
 
 
-// Globales
+//--------------------- Globales -----------------------
 
 * {
     margin: 0;
@@ -48,7 +48,7 @@ body {
 
 }
 
-// Header
+// ------------------- Header --------------------
 
 header {
     font-family: $fuente1;
@@ -117,7 +117,7 @@ header {
 }
 
 
-// Main 
+// --------------- Main ----------------------
 
 main {
 
@@ -218,23 +218,30 @@ main {
             height: 17.5rem;
             top: 29rem;
 
-            li {
-                margin-bottom: 2rem;
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
             }
 
-            a {
-                font-size: 1.7rem;
-                color: $White;
-                line-height: 1.6;
+            ;
+        }
 
-                span {
-                    font-size: 1.7rem;
-                    font-weight: bold;
-                }
+        li {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            font-size: 1.7rem;
+            color: $White;
+            line-height: 1.6;
+
+            span {
+                font-size: 1.7rem;
+                font-weight: bold;
             }
         }
     }
 }
+
 
 .section__espectacles {
     background-color: $White;
@@ -271,7 +278,7 @@ main {
             background-color: $Orange;
             width: 5.6rem;
             height: 5.6rem;
-        }   
+        }
     }
 
     .texts {
@@ -336,10 +343,16 @@ main {
     }
 }
 
+.section__covers {
+
+    img {
+        width: 100%;
+    }
+}
 
 
 
-// ---------------Breakpoints
+// ---------------Breakpoints ------------------------
 
 @media screen and (max-width: $breakmid) {
 
@@ -493,6 +506,11 @@ main {
                         margin-right: 1rem;
                     }
 
+                }
+
+                .ficha-artistica {
+                    margin-top: 3rem;
+                    margin-bottom: 1rem;
                 }
             }
         }

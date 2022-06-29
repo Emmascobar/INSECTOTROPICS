@@ -152,15 +152,18 @@ main img {
   height: 17.5rem;
   top: 29rem;
 }
-.section__agenda--column .section__agenda--list li {
+.section__agenda--column .section__agenda--list ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.section__agenda--column li {
   margin-bottom: 2rem;
 }
-.section__agenda--column .section__agenda--list a {
+.section__agenda--column a {
   font-size: 1.7rem;
   color: rgb(255, 255, 255);
   line-height: 1.6;
 }
-.section__agenda--column .section__agenda--list a span {
+.section__agenda--column a span {
   font-size: 1.7rem;
   font-weight: bold;
 }
@@ -248,6 +251,10 @@ main img {
 .section__espectacles .texts .ficha-artistica span {
   font-size: 1.6rem;
   font-weight: bold;
+}
+
+.section__covers img {
+  width: 100%;
 }
 
 @media screen and (max-width: 780px) {
@@ -374,5 +381,9 @@ main img {
   .section__espectacles--body .texts .btn__material i {
     font-size: 2rem;
     margin-right: 1rem;
+  }
+  .section__espectacles--body .texts .ficha-artistica {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
   }
 }/*# sourceMappingURL=stile.css.map */
