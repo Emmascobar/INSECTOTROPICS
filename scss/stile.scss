@@ -1,0 +1,352 @@
+// Variables
+
+$fuente1: 'Inter', sans-serif;
+$fuente2: 'Open Sans', sans-serif;
+$White: rgb(255, 255, 255);
+$Black: #000;
+$Orange: #FF7F00;
+$red: #F44E4E;
+$Grey: #353535;
+$lightgrey: #7F7F7F;
+$breaktablet: 748px;
+$breakmobile: 520px;
+
+
+// Globales
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1 rem = 10px */
+    text-decoration: none;
+    list-style: none;
+
+}
+
+
+// Body
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+    /* 1 rem = 10px */
+    background-color: $Black;
+    font-family: $fuente2;
+    font-weight: lighter;
+
+    a:visited {
+        color: $Black;
+    }
+
+}
+
+// Header
+
+header {
+    margin-top: 1rem;
+    font-family: $fuente1;
+    font-weight: lighter;
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-left: 30rem;
+        margin-right: 30rem;
+
+        &__items {
+            display: block;
+            position: absolute;
+            top: 10rem;
+            right: 1rem;
+            left: 1rem;
+
+            &--list {
+                background-color: $White;
+                color: $Black;
+                text-transform: uppercase;
+                font-size: 3.2rem;
+                width: 98vw;
+                height: 29rem;
+                padding: 2rem;
+                text-align: right;
+                padding-right: 22rem;
+                display: none;
+
+                .nav__items--espectacles {
+
+                    a {
+                        font-size: 1.2rem;
+                        line-height: 1.6;
+                        color: $lightgrey;
+                    }
+
+                }
+
+            }
+
+        }
+
+        &__menubar {
+            i {
+                color: $White;
+                font-size: 4rem;
+            }
+        }
+    }
+
+}
+
+
+// Main 
+
+main {
+
+
+    .Main_heroimage {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+    }
+
+    img {
+        width: 80vw;
+        object-position: center;
+        position: relative;
+        top: -7rem;
+        z-index: -1;
+    }
+}
+
+
+// Sections
+
+.section__insecto {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 580px;
+    margin-top: 1rem;
+    padding: 5rem;
+    background-color: $Grey;
+    width: 100%;
+    height: 590px;
+    gap: 16rem;
+    color: $White;
+
+    h1 {
+        font-size: 12rem;
+        line-height: 8rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        width: 475px;
+        height: auto;
+
+        span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+}
+
+.section__agenda {
+    width: 100%;
+    height: 522px;
+    background-color: $red;
+    position: relative;
+    top: 109rem;
+
+    &--cajas {
+        width: 312px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .caja1 {
+            background-color: $Orange;
+            width: 5.6rem;
+            height: 5.6rem;
+        }
+
+        .caja2 {
+            background-color: $Orange;
+            width: 5.6rem;
+            height: 5.6rem;
+        }
+
+        .caja3 {
+            background-color: $Orange;
+            width: 5.6rem;
+            height: 5.6rem;
+        }
+
+    }
+
+    &--column {
+        position: absolute;
+        top: 0rem;
+        left: 32rem;
+
+        .section__agenda--titulo {
+
+            h2 {
+                position: absolute;
+                top: 8rem;
+                font-size: 9rem;
+                font-weight: bold;
+                color: $White;
+            }
+        }
+
+        .section__agenda--list {
+            overflow-y: scroll;
+            width: 70rem;
+            height: 17.5rem;
+            position: absolute;
+            top: 29rem;
+
+            li {
+                margin-bottom: 2rem;
+            }
+
+            a {
+                font-size: 1.7rem;
+                color: $White;
+                line-height: 1.6;
+
+                span {
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+.section__espectacles {
+    width: 100%;
+    height: 817px;
+    background-color: $White;
+    position: relative;
+    top: 109rem;
+
+    &--cajas {
+        width: 312px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .caja1 {
+            background-color: $Orange;
+            width: 5.6rem;
+            height: 5.6rem;
+        }
+
+        .caja2 {
+            background-color: $Orange;
+            width: 5.6rem;
+            height: 5.6rem;
+            position: relative;
+            top: -15rem;
+        }
+
+        .caja3 {
+            background-color: $Orange;
+            width: 5.6rem;
+            height: 5.6rem;
+        }
+
+        .caja4 {
+            background-color: $Orange;
+            width: 5.6rem;
+            height: 5.6rem;
+        }
+
+    }
+
+    &--texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        top: 6rem;
+        left: 32rem;
+        width: 70%;
+        height: 700px;
+        color: $Black;
+
+        h3 {
+            font-size: 3.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+
+            i {
+                font-size: 3rem;
+            }
+        }
+
+        .description {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 8rem;
+
+            p {
+                font-size: 1.6rem;
+                height: auto;
+            }
+        }
+
+        .btn__material {
+            border: none;
+            background-color: $red;
+            color: $White;
+            padding: .5rem;
+            align-self: flex-end;
+            width: 24rem;
+            height: 3rem;
+            font-size: 1.6rem;
+            font-weight: bold;
+
+            i {
+                font-size: 1.6rem;
+                margin-right: 1rem;
+            }
+
+        }
+
+        .ficha-artistica {
+            margin-top: 4.5rem;
+            font-size: 1.4rem;
+
+            span {
+                font-size: 1.6rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &--img {
+        display: block;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
