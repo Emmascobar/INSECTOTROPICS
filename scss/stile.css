@@ -34,15 +34,18 @@ header .nav {
   z-index: 999;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-end;
 }
 header .nav__logo img {
   width: 100%;
-  padding-right: 16rem;
+}
+header .nav__menubar i {
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
 }
 header .nav__items {
-  display: block;
+  position: relative;
   top: 10rem;
   right: 1rem;
   left: 1rem;
@@ -65,11 +68,6 @@ header .nav__items--list .nav__items--espectacles a {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #7F7F7F;
-}
-header .nav__menubar i {
-  color: rgb(255, 255, 255);
-  font-size: 4rem;
-  padding-left: 16rem;
 }
 
 main .Main_heroimage {
