@@ -38,6 +38,10 @@ body {
     font-family: $fuente2;
     font-weight: lighter;
 
+    a {
+        color: $Black;
+    }
+
     a:visited {
         color: $Black;
     }
@@ -54,10 +58,16 @@ header {
     .nav {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: flex-end;
-        margin-left: 30rem;
-        margin-right: 30rem;
+        width: 100%;
+
+
+        &__logo {
+            img {
+                width: 100%;
+            }
+        }
 
         &__items {
             display: block;
@@ -72,6 +82,8 @@ header {
                 text-transform: uppercase;
                 font-size: 3.2rem;
                 width: 98vw;
+                margin: 0 auto;
+                opacity: 90%;
                 height: 29rem;
                 padding: 2rem;
                 text-align: right;
@@ -193,6 +205,7 @@ main {
     }
 
     &--column {
+        width: 70%;
         position: absolute;
         top: 0rem;
         left: 32rem;
@@ -209,8 +222,8 @@ main {
         }
 
         .section__agenda--list {
+            width: 70%;
             overflow-y: scroll;
-            width: 70rem;
             height: 17.5rem;
             position: absolute;
             top: 29rem;
@@ -282,11 +295,10 @@ main {
     &--texts {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         position: absolute;
+        margin-right: 4rem;
         top: 6rem;
         left: 32rem;
-        width: 70%;
         height: 700px;
         color: $Black;
 
@@ -332,8 +344,8 @@ main {
         }
 
         .ficha-artistica {
-            margin-top: 4.5rem;
-            font-size: 1.4rem;
+            margin-top: 6rem;
+            font-size: 1.5rem;
 
             span {
                 font-size: 1.6rem;
