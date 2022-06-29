@@ -232,11 +232,8 @@ main {
                     font-weight: bold;
                 }
             }
-
         }
-
     }
-
 }
 
 .section__espectacles {
@@ -274,8 +271,7 @@ main {
             background-color: $Orange;
             width: 5.6rem;
             height: 5.6rem;
-        }
-
+        }   
     }
 
     .texts {
@@ -338,8 +334,6 @@ main {
             }
         }
     }
-
-
 }
 
 
@@ -372,7 +366,6 @@ main {
             width: 100%;
         }
     }
-
 }
 
 @media screen and (max-width: $breaktablet) {
@@ -504,6 +497,4 @@ main {
             }
         }
     }
-
-
 }
