@@ -8,7 +8,8 @@ $Orange: #FF7F00;
 $red: #F44E4E;
 $Grey: #353535;
 $lightgrey: #7F7F7F;
-$breaktablet: 748px;
+$breaktablet: 834px;
+$breakmid: 780px;
 $breakmobile: 520px;
 
 
@@ -29,14 +30,13 @@ $breakmobile: 520px;
 // Body
 
 body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+
     font-size: 16px;
     /* 1 rem = 10px */
     background-color: $Black;
     font-family: $fuente2;
     font-weight: lighter;
+    overflow-x: hidden;
 
     a {
         color: $Black;
@@ -51,27 +51,28 @@ body {
 // Header
 
 header {
-    margin-top: 1rem;
     font-family: $fuente1;
     font-weight: lighter;
 
     .nav {
+        width: 100%;
+        position: fixed;
+        top: 1rem;
+        z-index: 999;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: flex-end;
-        width: 100%;
-
 
         &__logo {
             img {
                 width: 100%;
+                padding-right: 16rem;
             }
         }
 
         &__items {
             display: block;
-            position: absolute;
             top: 10rem;
             right: 1rem;
             left: 1rem;
@@ -108,6 +109,7 @@ header {
             i {
                 color: $White;
                 font-size: 4rem;
+                padding-left: 16rem;
             }
         }
     }
@@ -121,17 +123,13 @@ main {
 
 
     .Main_heroimage {
-        width: 100%;
         display: flex;
         justify-content: center;
-        position: absolute;
     }
 
     img {
-        width: 80vw;
         object-position: center;
-        position: relative;
-        top: -7rem;
+        width: 82%;
         z-index: -1;
     }
 }
@@ -142,24 +140,20 @@ main {
 .section__insecto {
     display: flex;
     justify-content: center;
-    position: absolute;
-    top: 580px;
     margin-top: 1rem;
     padding: 5rem;
     background-color: $Grey;
-    width: 100%;
-    height: 590px;
-    gap: 16rem;
     color: $White;
-
-    h1 {
-        font-size: 12rem;
-        line-height: 8rem;
-    }
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+    padding-top: 6rem;
+    padding-bottom: 12rem;
+    gap: 16rem;
 
     p {
-        font-size: 1.5rem;
-        width: 475px;
+        font-size: 1.6rem;
+        width: 450px;
         height: auto;
 
         span {
@@ -171,10 +165,8 @@ main {
 
 .section__agenda {
     width: 100%;
-    height: 522px;
+    height: 52rem;
     background-color: $red;
-    position: relative;
-    top: 109rem;
 
     &--cajas {
         width: 312px;
@@ -205,27 +197,25 @@ main {
     }
 
     &--column {
-        width: 70%;
-        position: absolute;
-        top: 0rem;
+        position: relative;
+        top: -40rem;
         left: 32rem;
+        width: 80%;
 
         .section__agenda--titulo {
 
             h2 {
-                position: absolute;
-                top: 8rem;
                 font-size: 9rem;
                 font-weight: bold;
                 color: $White;
+                padding-bottom: 4.8rem;
             }
         }
 
         .section__agenda--list {
-            width: 70%;
+            width: 80%;
             overflow-y: scroll;
             height: 17.5rem;
-            position: absolute;
             top: 29rem;
 
             li {
@@ -250,19 +240,15 @@ main {
 }
 
 .section__espectacles {
-    width: 100%;
-    height: 817px;
     background-color: $White;
-    position: relative;
-    top: 109rem;
+    display: flex;
 
     &--cajas {
-        width: 312px;
-        height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: flex-end;
+        justify-content: space-between;
+        width: 326rem;
 
         .caja1 {
             background-color: $Orange;
@@ -292,14 +278,12 @@ main {
 
     }
 
-    &--texts {
+    .texts {
         display: flex;
         flex-direction: column;
-        position: absolute;
+        margin-top: 5rem;
+        margin-left: 1rem;
         margin-right: 4rem;
-        top: 6rem;
-        left: 32rem;
-        height: 700px;
         color: $Black;
 
         h3 {
@@ -307,7 +291,7 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 2rem;
+            margin-bottom: 5rem;
 
             i {
                 font-size: 3rem;
@@ -344,7 +328,8 @@ main {
         }
 
         .ficha-artistica {
-            margin-top: 6rem;
+            margin-top: 4rem;
+            margin-bottom: 5rem;
             font-size: 1.5rem;
 
             span {
@@ -354,11 +339,171 @@ main {
         }
     }
 
-    &--img {
-        display: block;
+
+}
+
+
+
+
+// ---------------Breakpoints
+
+@media screen and (max-width: $breakmid) {
+
+    .section__insecto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1rem;
+        padding: 5rem;
+        background-color: $Grey;
+        color: $White;
+        width: auto;
+        height: auto;
+        margin-top: 1rem;
+        padding-top: 6rem;
+        padding-bottom: 12rem;
+        gap: 4rem;
+
         img {
+            width: 50%;
+        }
+
+        p {
             width: 100%;
-            object-fit: cover;
         }
     }
+
+}
+
+@media screen and (max-width: $breaktablet) {
+
+
+    .section__agenda {
+        width: 100%;
+        height: 52rem;
+        background-color: $red;
+
+        &--cajas {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+        }
+
+        &--column {
+            position: relative;
+            top: -40rem;
+            left: 10rem;
+
+        }
+    }
+
+    .section__espectacles {
+        background-color: $White;
+        display: flex;
+
+        &--cajas {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 6rem;
+
+        }
+
+        .texts {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5rem;
+            margin-left: 1rem;
+            margin-right: 4rem;
+            color: $Black;
+
+            .description {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                margin-bottom: 8rem;
+
+                p {
+                    font-size: 1.6rem;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakmobile) {
+
+
+    .section__agenda {
+        width: 100%;
+        height: 52rem;
+        background-color: $red;
+
+        &--cajas {
+            display: none
+        }
+
+        &--column {
+            position: relative;
+            top: 10rem;
+            left: 5rem;
+
+            .section__agenda--list {
+                width: 100%;
+                overflow-y: scroll;
+                height: 17.5rem;
+                top: 29rem;
+
+            }
+        }
+    }
+
+    .section__espectacles {
+        background-color: $White;
+        display: flex;
+        padding: 2rem;
+
+        &--cajas {
+            display: none
+        }
+
+        &--body {
+
+            .texts {
+                display: flex;
+                flex-direction: column;
+                margin-top: 2rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+
+                .description {
+                    margin-bottom: 2rem;
+                }
+
+                .btn__material {
+                    border: none;
+                    background-color: $red;
+                    color: $White;
+                    padding: .5rem;
+                    align-self: center;
+                    width: 33rem;
+                    height: 5.6rem;
+                    font-size: 2rem;
+                    font-weight: bold;
+
+                    i {
+                        font-size: 2rem;
+                        margin-right: 1rem;
+                    }
+
+                }
+            }
+        }
+    }
+
+
 }
