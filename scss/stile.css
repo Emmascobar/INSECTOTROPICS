@@ -105,63 +105,39 @@ main img {
 }
 
 .section__agenda {
-  width: 100%;
-  height: 52rem;
   background-color: #F44E4E;
+  width: 100%;
 }
-.section__agenda--cajas {
-  width: 312px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
+.section__agenda--content {
+  margin: 0 auto;
+  margin-left: 20%;
 }
-.section__agenda--cajas .caja1 {
+.section__agenda .caja {
   background-color: #FF7F00;
   width: 5.6rem;
   height: 5.6rem;
 }
-.section__agenda--cajas .caja2 {
-  background-color: #FF7F00;
-  width: 5.6rem;
-  height: 5.6rem;
-}
-.section__agenda--cajas .caja3 {
-  background-color: #FF7F00;
-  width: 5.6rem;
-  height: 5.6rem;
-}
-.section__agenda--column {
-  position: relative;
-  top: -40rem;
-  left: 32rem;
-  width: 80%;
-}
-.section__agenda--column .section__agenda--titulo h2 {
+.section__agenda h2 {
   font-size: 9rem;
   font-weight: bold;
   color: rgb(255, 255, 255);
-  padding-bottom: 4.8rem;
+  padding-left: 6rem;
 }
-.section__agenda--column .section__agenda--list {
-  width: 80%;
+.section__agenda .section__agenda--list {
+  width: 75%;
   overflow-y: scroll;
   height: 17.5rem;
-  top: 29rem;
+  padding-left: 6rem;
 }
-.section__agenda--column .section__agenda--list ::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-.section__agenda--column li {
+.section__agenda .section__agenda--list li {
   margin-bottom: 2rem;
 }
-.section__agenda--column a {
+.section__agenda .section__agenda--list a {
   font-size: 1.7rem;
   color: rgb(255, 255, 255);
   line-height: 1.6;
 }
-.section__agenda--column a span {
+.section__agenda .section__agenda--list a span {
   font-size: 1.7rem;
   font-weight: bold;
 }
@@ -170,63 +146,37 @@ main img {
   background-color: rgb(255, 255, 255);
   display: flex;
 }
-.section__espectacles--cajas {
+.section__espectacles--content {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-  width: 326rem;
+  margin-left: 20%;
+  margin-right: 6rem;
 }
-.section__espectacles--cajas .caja1 {
+.section__espectacles--content .caja {
   background-color: #FF7F00;
   width: 5.6rem;
   height: 5.6rem;
 }
-.section__espectacles--cajas .caja2 {
-  background-color: #FF7F00;
-  width: 5.6rem;
-  height: 5.6rem;
-  position: relative;
-  top: -15rem;
-}
-.section__espectacles--cajas .caja3 {
-  background-color: #FF7F00;
-  width: 5.6rem;
-  height: 5.6rem;
-}
-.section__espectacles--cajas .caja4 {
-  background-color: #FF7F00;
-  width: 5.6rem;
-  height: 5.6rem;
-}
-.section__espectacles .texts {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
-  margin-left: 1rem;
-  margin-right: 4rem;
-  color: #000;
-}
-.section__espectacles .texts h3 {
+.section__espectacles--content h3 {
   font-size: 3.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5rem;
+  padding-left: 6rem;
 }
-.section__espectacles .texts h3 i {
+.section__espectacles--content h3 i {
   font-size: 3rem;
 }
-.section__espectacles .texts .description {
+.section__espectacles--content .description {
+  padding-left: 6rem;
   display: flex;
   gap: 2rem;
-  margin-bottom: 8rem;
 }
-.section__espectacles .texts .description p {
+.section__espectacles--content .description p {
   font-size: 1.6rem;
   height: auto;
 }
-.section__espectacles .texts .btn__material {
+.section__espectacles--content .btn__material {
   border: none;
   background-color: #F44E4E;
   color: rgb(255, 255, 255);
@@ -237,16 +187,15 @@ main img {
   font-size: 1.6rem;
   font-weight: bold;
 }
-.section__espectacles .texts .btn__material i {
+.section__espectacles--content .btn__material i {
   font-size: 1.6rem;
   margin-right: 1rem;
 }
-.section__espectacles .texts .ficha-artistica {
-  margin-top: 4rem;
-  margin-bottom: 5rem;
+.section__espectacles--content .ficha-artistica {
+  padding-left: 6rem;
   font-size: 1.5rem;
 }
-.section__espectacles .texts .ficha-artistica span {
+.section__espectacles--content .ficha-artistica span {
   font-size: 1.6rem;
   font-weight: bold;
 }
@@ -282,106 +231,78 @@ main img {
   .section__agenda {
     width: 100%;
     height: 52rem;
-    background-color: #F44E4E;
   }
-  .section__agenda--cajas {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-  .section__agenda--column {
-    position: relative;
-    top: -40rem;
-    left: 10rem;
+  .section__agenda--content {
+    margin-left: 0rem;
   }
 
   .section__espectacles {
     background-color: rgb(255, 255, 255);
     display: flex;
   }
-  .section__espectacles--cajas {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 6rem;
-  }
-  .section__espectacles .texts {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5rem;
-    margin-left: 1rem;
-    margin-right: 4rem;
-    color: #000;
-  }
-  .section__espectacles .texts .description {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 8rem;
-  }
-  .section__espectacles .texts .description p {
-    font-size: 1.6rem;
-    height: auto;
+  .section__espectacles--content {
+    margin-left: 0rem;
   }
 }
 @media screen and (max-width: 520px) {
+  .caja {
+    display: none;
+  }
+
   .section__agenda {
     width: 100%;
     height: 52rem;
-    background-color: #F44E4E;
   }
-  .section__agenda--cajas {
-    display: none;
-  }
-  .section__agenda--column {
-    position: relative;
-    top: 10rem;
-    left: 5rem;
-  }
-  .section__agenda--column .section__agenda--list {
-    width: 100%;
+  .section__agenda .section__agenda--list {
+    margin-top: 6rem;
+    width: 90%;
     overflow-y: scroll;
-    height: 17.5rem;
-    top: 29rem;
+  }
+  .section__agenda--content {
+    padding-top: 5rem;
   }
 
   .section__espectacles {
-    background-color: rgb(255, 255, 255);
     display: flex;
-    padding: 2rem;
   }
-  .section__espectacles--cajas {
-    display: none;
+  .section__espectacles--content {
+    padding-top: 3rem;
+    margin-right: 4rem;
   }
-  .section__espectacles--body .texts {
+  .section__espectacles--content h3 {
+    padding-left: 5rem;
+    padding-top: 3rem;
+  }
+  .section__espectacles--content .description {
+    padding-top: 3rem;
+    padding-left: 5rem;
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    gap: 2rem;
   }
-  .section__espectacles--body .texts .description {
-    margin-bottom: 2rem;
+  .section__espectacles--content .description p {
+    font-size: 1.6rem;
+    height: auto;
   }
-  .section__espectacles--body .texts .btn__material {
+  .section__espectacles--content .btn__material {
     border: none;
     background-color: #F44E4E;
     color: rgb(255, 255, 255);
     padding: 0.5rem;
-    align-self: center;
+    align-self: flex-end;
+    margin-top: 3rem;
     width: 34rem;
     height: 5.6rem;
     font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
   }
-  .section__espectacles--body .texts .btn__material i {
+  .section__espectacles--content .btn__material i {
     font-size: 2rem;
     margin-right: 1rem;
   }
-  .section__espectacles--body .texts .ficha-artistica {
+  .section__espectacles--content .ficha-artistica {
     margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
 }/*# sourceMappingURL=stile.css.map */

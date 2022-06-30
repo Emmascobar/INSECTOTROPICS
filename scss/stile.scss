@@ -162,66 +162,35 @@ main {
 }
 
 .section__agenda {
-    width: 100%;
-    height: 52rem;
     background-color: $red;
+    width: 100%;
 
-    &--cajas {
-        width: 312px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
+    &--content {
+        margin: 0 auto;
+        margin-left: calc(40% / 2);
+    }
 
-        .caja1 {
-            background-color: $Orange;
-            width: 5.6rem;
-            height: 5.6rem;
-        }
-
-        .caja2 {
-            background-color: $Orange;
-            width: 5.6rem;
-            height: 5.6rem;
-        }
-
-        .caja3 {
-            background-color: $Orange;
-            width: 5.6rem;
-            height: 5.6rem;
-        }
+    .caja {
+        background-color: $Orange;
+        width: 5.6rem;
+        height: 5.6rem;
 
     }
 
-    &--column {
-        position: relative;
-        top: -40rem;
-        left: 32rem;
-        width: 80%;
+    h2 {
+        font-size: 9rem;
+        font-weight: bold;
+        color: $White;
+        padding-left: 6rem;
 
-        .section__agenda--titulo {
+    }
 
-            h2 {
-                font-size: 9rem;
-                font-weight: bold;
-                color: $White;
-                padding-bottom: 4.8rem;
-            }
-        }
 
-        .section__agenda--list {
-            width: 80%;
-            overflow-y: scroll;
-            height: 17.5rem;
-            top: 29rem;
-
-            ::-webkit-scrollbar-track {
-                background: #f1f1f1;
-            }
-
-            ;
-        }
+    .section__agenda--list {
+        width: 75%;
+        overflow-y: scroll;
+        height: 17.5rem;
+        padding-left: 6rem;
 
         li {
             margin-bottom: 2rem;
@@ -237,7 +206,10 @@ main {
                 font-weight: bold;
             }
         }
+
     }
+
+
 }
 
 
@@ -245,54 +217,24 @@ main {
     background-color: $White;
     display: flex;
 
-    &--cajas {
+    &--content {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        justify-content: space-between;
-        width: 326rem;
+        margin-left: calc(40% / 2);
+        margin-right: 6rem;
 
-        .caja1 {
+        .caja {
             background-color: $Orange;
             width: 5.6rem;
             height: 5.6rem;
         }
-
-        .caja2 {
-            background-color: $Orange;
-            width: 5.6rem;
-            height: 5.6rem;
-            position: relative;
-            top: -15rem;
-        }
-
-        .caja3 {
-            background-color: $Orange;
-            width: 5.6rem;
-            height: 5.6rem;
-        }
-
-        .caja4 {
-            background-color: $Orange;
-            width: 5.6rem;
-            height: 5.6rem;
-        }
-    }
-
-    .texts {
-        display: flex;
-        flex-direction: column;
-        margin-top: 5rem;
-        margin-left: 1rem;
-        margin-right: 4rem;
-        color: $Black;
 
         h3 {
             font-size: 3.2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 5rem;
+            padding-left: 6rem;
 
             i {
                 font-size: 3rem;
@@ -300,9 +242,9 @@ main {
         }
 
         .description {
+            padding-left: 6rem;
             display: flex;
             gap: 2rem;
-            margin-bottom: 8rem;
 
             p {
                 font-size: 1.6rem;
@@ -329,8 +271,7 @@ main {
         }
 
         .ficha-artistica {
-            margin-top: 4rem;
-            margin-bottom: 5rem;
+            padding-left: 6rem;
             font-size: 1.5rem;
 
             span {
@@ -338,8 +279,10 @@ main {
                 font-weight: bold;
             }
         }
+
     }
 }
+
 
 .section__covers {
 
@@ -385,21 +328,9 @@ main {
     .section__agenda {
         width: 100%;
         height: 52rem;
-        background-color: $red;
 
-        &--cajas {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-between;
-
-        }
-
-        &--column {
-            position: relative;
-            top: -40rem;
-            left: 10rem;
-
+        &--content {
+            margin-left: 0rem;
         }
     }
 
@@ -407,109 +338,87 @@ main {
         background-color: $White;
         display: flex;
 
-        &--cajas {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-between;
-            width: 6rem;
+
+        &--content {
+            margin-left: 0rem;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: $breakmobile) {
+
+    .caja {
+        display: none;
+    }
+
+    .section__agenda {
+        width: 100%;
+        height: 52rem;
+
+
+        .section__agenda--list {
+            margin-top: 6rem;
+            width: 90%;
+            overflow-y: scroll;
 
         }
 
-        .texts {
-            display: flex;
-            flex-direction: column;
-            margin-top: 5rem;
-            margin-left: 1rem;
+        &--content {
+            padding-top: 5rem;
+        }
+    }
+
+
+    .section__espectacles {
+        display: flex;
+
+        &--content {
+            padding-top: 3rem;
             margin-right: 4rem;
-            color: $Black;
+
+            h3 {
+                padding-left: 5rem;
+                padding-top: 3rem;
+            }
 
             .description {
+                padding-top: 3rem;
+                padding-left: 5rem;
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
-                margin-bottom: 8rem;
 
                 p {
                     font-size: 1.6rem;
                     height: auto;
                 }
             }
-        }
-    }
-}
 
-@media screen and (max-width: $breakmobile) {
+            .btn__material {
+                border: none;
+                background-color: $red;
+                color: $White;
+                padding: .5rem;
+                align-self: flex-end;
+                margin-top: 3rem;
+                width: 34rem;
+                height: 5.6rem;
+                font-size: 2rem;
+                font-size: 1.6rem;
+                font-weight: bold;
 
-
-    .section__agenda {
-        width: 100%;
-        height: 52rem;
-        background-color: $red;
-
-        &--cajas {
-            display: none
-        }
-
-        &--column {
-            position: relative;
-            top: 10rem;
-            left: 5rem;
-
-            .section__agenda--list {
-                width: 100%;
-                overflow-y: scroll;
-                height: 17.5rem;
-                top: 29rem;
+                i {
+                    font-size: 2rem;
+                    margin-right: 1rem;
+                }
 
             }
-        }
-    }
 
-    .section__espectacles {
-        background-color: $White;
-        display: flex;
-        padding: 2rem;
-
-        &--cajas {
-            display: none
-        }
-
-        &--body {
-
-            .texts {
-                display: flex;
-                flex-direction: column;
-                margin-top: 2rem;
-                margin-left: 1rem;
-                margin-right: 1rem;
-
-                .description {
-                    margin-bottom: 2rem;
-                }
-
-                .btn__material {
-                    border: none;
-                    background-color: $red;
-                    color: $White;
-                    padding: .5rem;
-                    align-self: center;
-                    width: 34rem;
-                    height: 5.6rem;
-                    font-size: 2rem;
-                    font-weight: bold;
-
-                    i {
-                        font-size: 2rem;
-                        margin-right: 1rem;
-                    }
-
-                }
-
-                .ficha-artistica {
-                    margin-top: 3rem;
-                    margin-bottom: 1rem;
-                }
+            .ficha-artistica {
+                margin-top: 3rem;
+                margin-bottom: 3rem;
             }
         }
     }
