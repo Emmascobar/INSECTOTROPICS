@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1 rem = 10px */
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-size: 16px;
+  /* 1 rem = 10px */
+  font-family: "Open Sans", sans-serif;
+  background-color: #353535;
+  font-weight: lighter;
+  overflow-x: hidden;
+}
+body a {
+  color: #000;
+}
+body a:visited {
+  color: #000;
+}
+
+header {
+  font-family: "Inter", sans-serif;
+  font-weight: lighter;
+}
+header .nav {
+  width: 100%;
+  position: fixed;
+  top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  display: none;
+}
+header .nav__logo img {
+  width: 100%;
+}
+header .nav__menubar i {
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+}
+header .nav__items {
+  position: relative;
+  top: 10rem;
+  right: 1rem;
+  left: 1rem;
+}
+header .nav__items--list {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  width: 98vw;
+  margin: 0 auto;
+  opacity: 90%;
+  height: 29rem;
+  padding: 2rem;
+  text-align: right;
+  padding-right: 22rem;
+  display: none;
+}
+header .nav__items--list .nav__items--espectacles a {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #7F7F7F;
+}
+
+main img {
+  width: 100%;
+}
+main .section__description {
+  position: relative;
+  top: -0.2rem;
+  min-height: 44rem;
+  background-color: #353535;
+}
+main .section__description--elements {
+  margin: 0 auto;
+  width: 70%;
+}
+main .section__description .caja {
+  background-color: #FF7F00;
+  width: 5.6rem;
+  height: 5.6rem;
+}
+main .section__description h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  padding-left: 6rem;
+}
+main .section__description .description {
+  display: flex;
+  flex-direction: row;
+}
+main .section__description .description p {
+  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+  padding-left: 6rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 834px) {
+  main .section__description--elements {
+    margin: 0;
+    width: 100%;
+  }
+  main .section__description .description {
+    display: flex;
+    flex-direction: column;
+  }
+  main .section__description .description p {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 520px) {
+  main .section__description .caja {
+    display: none;
+  }
+  main .section__description h1 {
+    padding-left: 2rem;
+  }
+  main .section__description--elements {
+    margin: 0;
+    width: 100%;
+    margin-top: 4rem;
+  }
+  main .section__description .description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    padding-left: 1rem;
+  }
+  main .section__description .description p {
+    width: 90%;
+    padding-left: 1rem;
+  }
+}/*# sourceMappingURL=quisom.css.map */
